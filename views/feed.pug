@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1(style='font-size: 10em;') FEED
+    div(class='ui form')
+        div(class='field')
+        label Express Yourself
+        textarea(id='text')
+        button(class='ui primary basic button' id='submit-button') Submit
+    h2 Posts
+    ul(id='posts')
+        // `posts` is a variable specified when the feed template is rendered
+        each post in posts 
+            li= post
